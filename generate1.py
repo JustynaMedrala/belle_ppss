@@ -3,8 +3,8 @@
 
 import basf2 as b2
 
-out_file ='B02rho+D*-.mdst.root'
-in_file='test4.dec'
+out_file ='B02rhoD*.mdst.root'
+in_file='test-rho.dec'
 
 path = b2.create_path()
 setter = path.add_module('EventInfoSetter', evtNumList=[50])
