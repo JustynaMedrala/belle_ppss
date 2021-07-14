@@ -9,8 +9,6 @@ Alias MyD0 D0
 Alias Myanti-D0 anti-D0
 ChargeConj MyD0 Myanti-D0
 
-
-
 Decay Upsilon(4S)
 # without mixing
 0.5 MyB0 anti-B0       VSS; 
