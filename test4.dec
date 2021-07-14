@@ -9,8 +9,6 @@ Alias MyD0 D0
 Alias Myanti-D0 anti-D0
 ChargeConj MyD0 Myanti-D0
 
-
-
 Decay Upsilon(4S)
 # without mixing
 0.5 MyB0 anti-B0       VSS;
@@ -19,7 +17,7 @@ Enddecay
 
 # Decay of B0 -> D*- pi+
 Decay MyB0
-1.0 rho+ D*-		SVV_HELAMP  0.317 0.19 0.936 0.0 0.152 1.47; 
+1.0 rho+ D*-		       SVV_HELAMP  0.317 0.19 0.936 0.0 0.152 1.47; 
 Enddecay
 CDecay Myanti-B0
 
