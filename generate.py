@@ -3,7 +3,7 @@
 
 import basf2 as b2
 
-out_file ='B02D*pi.mdst.root'
+out_file ='B02Dstpi.mdst.root'
 in_file='test-pi.dec'
 
 path = b2.create_path()

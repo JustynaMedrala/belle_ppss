@@ -1,0 +1,119 @@
+Belle II software tools set up at: /cvmfs/belle.cern.ch/tools
+Environment setup for release: release-04-02-09
+Central release directory    : /cvmfs/belle.cern.ch/el7/releases/release-04-02-09
+[INFO] Steering file: generate1.py
+
+===================
+  EventInfoSetter
+===================
+Description: Sets the event meta data information (exp, run, evt). You must use this module to tell basf2 about the number of events you want to generate, unless you have an input module that already does so. Note that all experiment/run combinations specified must be unique.
+Package:     framework
+--------------------------------------------------------------------------------
+Parameter   Type               Default Current Steering Description
+--------------------------------------------------------------------------------
+evtNumList  list(unsigned int) [1]     [50]    True     List of the number of
+                                                        events which should be
+                                                        processed. Can be
+                                                        overridden via -n
+                                                        argument to basf2.
+expList     list(int)          [0]     [0]     False    List of experiment
+                                                        numbers. Can be
+                                                        overridden via
+                                                        --experiment argument to
+                                                        basf2.
+runList     list(int)          [0]     [0]     False    List of run numbers. Can
+                                                        be overridden via --run
+                                                        argument to basf2.
+skipNEvents unsigned int       0       0       False    Skip this number of
+                                                        events before starting.
+                                                        Equivalent to running
+                                                        over this many events
+                                                        without performing any
+                                                        action, to allow
+                                                        starting at higher event
+                                                        numbers.
+skipToEvent list(int)          []      []      False    Skip events until the
+                                                        event with the specified
+                                                        (experiment, run, event
+                                                        number) occurs. This
+                                                        parameter is useful for
+                                                        debugging to start with
+                                                        a specific event.
+
+
+===============
+  EvtGenInput
+===============
+Description: EvtGenInput module. The module is served as an interface for EvtGen Event Generator so that the EvtGen generator can store the generated particles into MCParticles. The users need to provide their own decay mode based on the standard DECAY.DEC.
+Package:     generators
+-----------------------------------------------------------------------------------------
+Parameter         Type Default              Current                   Steering Descriptio
+                                                                               n
+-----------------------------------------------------------------------------------------
+CoherentMixing    bool True                 True                      False    decay the
+                                                                               neutral B
+                                                                               meson
+                                                                               pairs
+                                                                               coherently
+                                                                               or non-
+                                                                               coherently
+DECFile           str  /cvmfs/belle.cern.ch /cvmfs/belle.cern.ch/el7/ False    global
+                       /el7/releases/releas releases/release-04-02-09          DECfile to
+                       e-04-02-09/decfiles/ /decfiles/dec/DECAY_BELLE          be used
+                       dec/DECAY_BELLE2.DEC 2.DEC                              
+InclusiveParticle str                                                 False    Inclusive
+                                                                               Particle
+                                                                               Name
+InclusiveType     int  0                    0                         False    inclusive
+                                                                               decay type
+                                                                               (0:
+                                                                               generic,
+                                                                               1:
+                                                                               inclusive,
+                                                                               2:
+                                                                               inclusive
+                                                                               (charge
+                                                                               conjugate)
+ParentParticle    str  Upsilon(4S)          Upsilon(4S)               False    Parent
+                                                                               Particle
+                                                                               Name
+maxTries          int  100000               100000                    False    Number of
+                                                                               tries to
+                                                                               generate a
+                                                                               parent
+                                                                               particle
+                                                                               from the
+                                                                               beam
+                                                                               energies
+                                                                               which fits
+                                                                               inside the
+                                                                               mass
+                                                                               window
+                                                                               before
+                                                                               giving up
+userDECFile       str                       test-rho.dec              True     user
+                                                                               DECfile
+                                                                               name
+
+
+*************************************************************
+ Geant4 version Name: geant4-10-01-patch-02    (19-June-2015)
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+[INFO] Starting event processing, random seed is set to 'db4ddfe6117acb20e7338cc776eaa72c6e15ff6a2955bd26b533ad0b4e0c521c'
+[INFO] Conditions Database: found working server
+	url = http://belle2db.sdcc.bnl.gov/b2s/rest/
+[INFO] Conditions data: configured globaltag is release-04-02-06
+[INFO] SVDClusterCuts: from now on we are using ClusterCalibrations_default_2018-11-22T17:15:14.509000_INFO:_seed=5_adj=3_cls=0_scaleFactors=fromSimulation
+ ... message repeated 3 times
+[INFO] SVDPulseShapeCalibrations: from now on we are using PulseShapeCalibrations_default_2018-11-22T17:15:16.043000_INFO:_peakTime=75_pulseWidth=130_gain=fromPhase3calibrations
+ ... message repeated 3 times
+[INFO] SVDCoGTimeCalibrations: from now on we are using SVDCoGTimeCalibrations_MC_2019-07-30T20:18:02.275349_INFO:_3rdOrderPol_TBindep_lat=+47.16
+ ... message repeated 1 times
+[INFO] SVDFADCMaskedStrips: from now on we are using FADCMaskedStrips_default_2019-07-02T16:42:18.880884_INFO:_noFADCMaskedstrips
+[INFO] SVDNoiseCalibrations: from now on we are using NoiseCalibrations_default_2018-11-22T17:15:15.605000_INFO:_fromPhase3calibrations
+ ... message repeated 3 times
+[INFO] SVDHitTimeSelectionFunction: from now on we are using HitTimeSelection_default_2019-07-17T22:48:45.508791_INFO:_noCut_on_tmin

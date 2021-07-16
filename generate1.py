@@ -3,7 +3,7 @@
 
 import basf2 as b2
 
-out_file ='B02rhoD*.mdst.root'
+out_file ='B02rhoDt.mdst.root'
 in_file='test-rho.dec'
 
 path = b2.create_path()
